@@ -2,7 +2,7 @@ const data = require('../model/statesData.json');
 
 const verifyStates = (req, res, next) => {   
 
-    console.log("verifyStates middleware triggered");
+    // console.log("verifyStates middleware triggered");
 
 
     // create an array containing only the state codes
@@ -15,7 +15,7 @@ const verifyStates = (req, res, next) => {
     if (!stateCode) return res.status(400).json({ "message" : "Invalid state abbreviation parameter." });
 
 
-    
+
     req.code = stateCode;
     next();
     
